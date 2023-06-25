@@ -109,6 +109,14 @@ body {
   row-gap: 9.6rem;
 }
 
+/* .grid:last-child {
+  margin-bottom: 0;
+} */
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
 .grid--2-cols {
   grid-template-columns: repeat(2, 1fr);
 }
@@ -118,30 +126,59 @@ body {
   /* background-color: #e67e22; */
 }
 
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .grid--center-v {
   align-items: center;
 }
 
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.list-icon {
+  height: 3rem;
+  width: 3rem;
+  color: #cf711f;
+}
+
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
-  color: #fff;
+
   font-size: 2rem;
   font-weight: 600;
   padding: 1.6rem 3.2rem;
   text-decoration: none;
   border-radius: 9px;
 
+  border: none;
+  cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .btn--full:link,
 .btn--full:visited {
+  color: #fff;
   background-color: #e67e22;
 }
 
 .btn--full:hover,
 .btn--full:active {
+  color: #fff;
   background-color: #cf711f;
 }
 
@@ -158,6 +195,18 @@ body {
 
   /* Trick to add border inside */
   box-shadow: inset 0 0 0 3px #fff;
+}
+
+.btn--form {
+  color: #fff;
+  background-color: #45260a;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  color: #222;
+  background-color: #fff;
 }
 
 .link:link,
